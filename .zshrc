@@ -32,14 +32,17 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git)
+plugins=(git osx ruby)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/usr/local/heroku/bin:/Users/tadd.giles/.rvm/gems/ruby-1.9.3-p392/bin:/Users/tadd.giles/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/tadd.giles/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/tadd.giles/.rvm/bin:/usr/local/bin:/usr/local/sbin:/Users/tadd.giles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/Users/tadd.giles/bin/AWS-ElasticBeanstalk-CLI-2.3.1/eb/macosx/python2.7
+export PATH=/usr/local/heroku/bin:/Users/tadd.giles/.rvm/gems/ruby-1.9.3-p392/bin:/Users/tadd.giles/.rvm/gems/ruby-1.9.3-p392@global/bin:/Users/tadd.giles/.rvm/rubies/ruby-1.9.3-p392/bin:/Users/tadd.giles/.rvm/bin:/usr/local/bin:/usr/local/sbin:/Users/tadd.giles/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin
 
-export EDITOR="vim"
-bindkey -v
-
+# Load additional files 
+# ~/.zextras can be used for settings you don’t want to commit
+for file in ~/.{zextras,zaliases}; do
+	[ -r "$file" ] && source "$file"
+done
+unset file
 

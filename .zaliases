@@ -1,0 +1,21 @@
+alias v="vim"
+alias s="subl ."
+alias be='bundle exec'
+alias o="open"
+alias oo="open ."
+
+# Flush Directory Service cache
+alias flush="sudo killall -HUP mDNSResponder"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.Finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.Finder AppleShowAllFiles -bool false && killall Finder"
+
+# Hide/show all desktop icons (useful when presenting)
+alias hidedesktop="defaults write com.apple.finder CreateDesktop -bool false && killall Finder"
+alias showdesktop="defaults write com.apple.finder CreateDesktop -bool true && killall Finder"
+
+alias g="bundle exec guard start -i"
+alias cov="bundle exec rspec . ; open coverage/index.html"
+
+alias z="zeus"
