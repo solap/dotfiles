@@ -1,0 +1,44 @@
+# Set the default editor
+if [ -f /usr/local/bin/subl ]; then
+    export EDITOR='subl -w'
+elif [ -f /usr/local/bin/mate ]; then
+    export EDITOR='mate'
+    export GIT_EDITOR='mate -wl1'
+else
+	export EDITOR="vim"
+fi
+# Don’t clear the screen after quitting a manual page
+export MANPAGER="less -X"
+# Highlight section titles in manual pages
+export LESS_TERMCAP_md="$ORANGE"
+
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+shopt -s histappend                      # append to history, don't overwrite it
+
+# Save and reload the history after each command finishes
+export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
+
+# no ._ files in archives please
+export COPYFILE_DISABLE=true
+
+export NODE_PATH=/usr/local/lib/node_modules:$NODE_PATH
+
+export TZ=America/Denver
+
+# Prefer US English and use UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US"
+
+# Path for brew, then system
+export PATH=/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+
+# Path for Npm
+export PATH=/usr/local/share/npm/bin:$PATH
+
+# Path for Heroku CLI
+export PATH=/usr/local/heroku/bin:$PATH
+
+# Path for Ruby. Determines which ruby is currently linked in brew and sets path correctly
+export PATH=$(brew --prefix ruby`ruby -e 'v = RUBY_VERSION.gsub(".", ""); puts v if v.to_i < 200'`)/bin:$PATH
