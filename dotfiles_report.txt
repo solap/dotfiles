@@ -1,0 +1,28 @@
+Dotfiles Collection Report - Sat Feb 15 15:09:34 MST 2025
+=================================
+Scanning /Users/joeldehlin...
+  Found: .zshrc
+    Size: 593B
+    Last modified: Feb 10 16:53
+
+  Found: .viminfo
+    Size: 1.4K
+    Last modified: Feb 9 19:50
+
+  Found: .zshrc
+    Size: 593B
+    Last modified: Feb 10 16:53
+
+  Found: .gitconfig
+    Size: 180B
+    Last modified: Feb 8 09:52
+
+Scanning /Users/joeldehlin/.config...
+  Scanning /Users/joeldehlin/.config...
+  Scanning /Users/joeldehlin/.config/gh...
+Scanning /Users/joeldehlin/.local/state...
+
+Summary
+=======
+Total files collected:        3
+Total size:  16K
