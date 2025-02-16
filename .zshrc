@@ -257,8 +257,8 @@ alias phxc='mix run'
 alias psetup='mix deps.get && mix ecto.setup'
 
 # Additional helpful Phoenix aliases
-alias phxs='mix phx.server'  # Start Phoenix server
-alias phxi='iex -S mix'      # Start interactive Elixir shell with project context
+alias phxs='clear && mix phx.server'  # Start Phoenix server
+alias phxi='clear && iex -S mix'      # Start interactive Elixir shell with project context
 
     
 # =============================================================================
